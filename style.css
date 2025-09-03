@@ -1,0 +1,501 @@
+/* Global Styles */
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efe7df;
+    color: #2a2a2a;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3ebe4;
+    overflow: hidden;
+}
+
+.hero-top {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.875rem;
+    font-style: italic;
+    letter-spacing: 0.25em;
+    user-select: none;
+}
+
+.hero-content {
+    max-width: 28rem;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.hero-panels {
+    position: relative;
+    height: 64vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.panel {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: slideIn 0.9s ease-out forwards;
+}
+
+.panel:nth-child(1) { animation-delay: 0s; }
+.panel:nth-child(2) { animation-delay: 0.2s; }
+.panel:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes slideIn {
+    from { transform: translateY(80px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hero-names {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    pointer-events: none;
+    font-family: 'Edwardian Script ITC', cursive; /* Assuming similar font */
+    color: rgb(255, 255, 255);
+    text-shadow: 110 10 100px rgba(255, 12, 12, 0.5);
+    font-size: 3.75rem;
+    user-select: none;
+    transform: rotate(-2deg);
+}
+
+.name-left {
+    position: absolute;
+    left: -8px;
+    top: -48px;
+}
+
+.name-right {
+    position: absolute;
+    right: -8px;
+    top: 48px;
+}
+
+.hero-date {
+    margin-top: 24px;
+    text-align: center;
+    letter-spacing: 0.35em;
+    font-size: 0.875rem;
+}
+
+.line {
+    margin: 8px auto 0;
+    height: 1px;
+    width: 6rem;
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* Intro Section */
+.intro {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 48px;
+    margin-top: -32px;
+}
+
+.intro p {
+    text-align: center;
+    letter-spacing: 0.05em;
+    font-size: 1.5625rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.countdown-section {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.countdown-title {
+    font-family: serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: monospace;
+    font-size: 1.25rem;
+}
+
+.countdown-labels {
+    margin-top: 8px;
+    font-size: 0.625rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Parents Section */
+.parents {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 32px;
+}
+
+.parents h2 {
+    font-family: serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.parents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.parent-title {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+/* Photo Sections */
+.photo {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 32px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Ceremony Section */
+.ceremony {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 32px;
+}
+
+.ceremony-content {
+    display: flex;
+    gap: 16px;
+}
+
+.icon {
+    margin-top: 4px;
+    font-size: 1.5rem;
+}
+
+.ceremony-title {
+    font-family: serif;
+    font-style: italic;
+}
+
+.ceremony-location {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.ceremony-address {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.ceremony-time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+    font-size: 0.875rem;
+}
+
+.location-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.location-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Timeline Section */
+.timeline {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.timeline h3 {
+    font-family: serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: start;
+    gap: 16px;
+}
+
+.timeline-item.left .timeline-content {
+    text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+    text-align: left;
+    order: 3;
+}
+
+.timeline-content .time {
+    font-weight: 600;
+}
+
+.timeline-content .title {
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+.timeline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.7);
+    position: relative;
+}
+
+.timeline-dot::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 64px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.timeline-icon {
+    opacity: 0.7;
+    font-size: 1.5rem;
+}
+
+/* Dress Code Section */
+.dress-code {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 8px;
+}
+
+.dress-content {
+    text-align: center;
+}
+
+.dress-title {
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.dress-content p {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.color {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.color.black {
+    background-color: #000;
+}
+
+.color.white {
+    background-color: #f3ebe4;
+    border: 1px solid #000;
+}
+
+/* RSVP Section */
+.rsvp {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.rsvp-content {
+    text-align: center;
+}
+
+.rsvp-title {
+    font-family: serif;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.rsvp-content p {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin: 8px 0 16px;
+}
+
+.rsvp-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    text-decoration: none;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.rsvp-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Final Photo Section */
+.final-photo {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+    position: relative;
+}
+
+.final-photo img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    display: block;
+}
+
+.final-photo .overlay-names {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: white;
+    font-family: 'Edwardian Script ITC', cursive;
+    font-size: 3.5rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    user-select: none;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.final-photo .overlay-names span {
+    display: block;
+}
+
+.final-photo .name-middle {
+    font-size: 4rem;
+    margin: 0.2em 0;
+}
+
+.thanks {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.thanks p {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+}
+
+.signature {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .hero-names {
+        font-size: 2.5rem;
+    }
+    .name-left {
+        top: -32px;
+    }
+    .name-right {
+        top: 32px;
+    }
+    .intro p {
+        font-size: 1.25rem;
+    }
+}
