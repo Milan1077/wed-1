@@ -481,7 +481,8 @@ footer {
     padding: 8px 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
 }
 
 /* Scroll Animations */
